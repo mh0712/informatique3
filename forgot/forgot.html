@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="uft-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="forgot.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="../login_page/loginpage.html">
+</head>
+<body>
+    <div class="form-box">
+        <h2>Forgot password</h2>
+        <hr>
+        <form action="" method="get">
+            <p><b>Enter Email:</b></p>
+            <div class="input">
+                <input type="email" id="email" placeholder="username@hotmail.com*" required>
+            </div>
+            <div class="code-container" id="code-container" style="display:none">
+                <input type="number" class="code" placeholder="_" min="0" max="9" >
+                <input type="number" class="code" placeholder="_" min="0" max="9" >
+                <input type="number" class="code" placeholder="_" min="0" max="9" >
+                <input type="number" class="code" placeholder="_" min="0" max="9" >
+                <input type="number" class="code" placeholder="_" min="0" max="9" >
+                <input type="number" class="code" placeholder="_" min="0" max="9" >
+            </div>
+
+
+            <p id="or">Or</p>
+            <hr>
+            <p><b>Enter Phone Number:</b></p>
+            <div class="sends">
+                <input type="tel" id="phone" placeholder="+961 71 123 456" autocomplete="off">
+            </div>
+            <hr style="margin-top:10%">
+            <div class="back">
+                <a href="../login_page/loginpage.html">Back</a>
+            </div>
+            <div class="button">
+                    <button type="buttons" class="send" id="send" onclick="verification()"  style="display:block">Send Verification</button>
+                    <button type="submit" id="submit" class="send" style="display:none">Submit Now</button>
+                </div>    
+            </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('form').on('submit', (e)=>{
+            e.preventDefault();
+            const email = $('#email').val().trim();
+            
+            const data = {
+                email
+            }
+            $.post('/nodemailer', data, function(){
+                console.log('Server received our data')
+            })
+        })
+        </script>
+        <script src="forgot.js"></script>
+</body>
+</html>

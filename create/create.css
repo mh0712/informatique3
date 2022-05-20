@@ -1,0 +1,116 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 200%;
+    color: rgb(22, 80, 87);
+    margin: 10%;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+.form-box{
+    width: 70%;
+    max-width: 450px;
+    height: 70%;
+    max-height: 520px;
+    top: 50%;
+    padding: 10px;
+    left: 50%;
+    border-radius: 5%;
+    background: rgba(0, 255, 242,1);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: -10px -10px 20px 2px rgb(2, 253, 211,0.5) ,10px 10px 20px 2px rgb(2, 253, 211,0.5),10px -10px 20px 2px rgb(2, 253, 211,0.5),-10px 10px 20px 2px rgb(2, 253, 211,0.5),-400px -400px 20px 2px rgb(2, 253, 211,0.5) inset,10px 10px 20px 2px rgb(2, 253, 211,0.5) inset ;
+    z-index: 1;
+  }
+  @media only screen and (max-width: 800px){
+    .form-box{
+      width: 80%;
+      height: 70%;
+      min-height: 500px;
+      max-height: 520px;
+      top: 50%;
+      padding: 10px;
+      left: 50%;
+      border-radius: 5%;
+      background: rgba(0, 255, 242, 1);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      box-shadow: -10px -10px 20px 2px rgb(2, 253, 211,0.5) ,10px 10px 20px 2px rgb(2, 253, 211,0.5),10px -10px 20px 2px rgb(2, 253, 211,0.5),-10px 10px 20px 2px rgb(2, 253, 211,0.5),-400px -400px 20px 2px rgb(2, 253, 211,0.5) inset,10px 10px 20px 2px rgb(2, 253, 211,0.5) inset ;
+      z-index: 1;
+  }
+}
+input{
+  width: 100%;
+  font-size: 110%;
+  border: none;
+  outline: none;  
+  background: transparent;
+  color:grey;
+  }
+.input-box{
+    margin: 31px;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
+.input-box i{
+  color: rgb(22, 80, 87);
+}
+#error{
+  margin-top: -5%;
+  text-align: center;
+}
+#pass,#confirmpass{
+  width: 90%;
+}
+.submit{
+  text-align: center;
+  font-size: 110%;
+  background-color:rgb(22, 187, 159);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+.back{
+    float:left;
+}
+.register{
+    text-align: right;
+}
+.submit:hover{
+  font-size: 111%;
+  background-color:rgb(15, 161, 137);
+  border-radius: 5px;
+}
+.eye{
+  background-color: transparent;
+  border: none;
+  font-size: 130%;
+}
+.forgot{
+  text-align: right;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  font-size: 90%;
+  
+}
+.create{
+  text-align: center;
+  padding: 10px;
+  font-size: 90%;
+}
+a:link{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 120%;
+}
+a:visited{
+  color:rgb(17, 82, 78);
+  
+}
+a:hover{
+  text-decoration: underline;
+}
+a:active{
+  color:red
+}
